@@ -29,6 +29,9 @@
 Bank myBank = new Bank("Banca Sharp");
 Console.WriteLine("Benvenuto in " + myBank.name);
 
+Customer Giuseppe = new Customer("Giuseppe", "Vinelli", "GSPVNL81D20C810A", 500);
+myBank.AddCustomer(Giuseppe);
+
 List<Customer> customerList = myBank.customers;
 Console.WriteLine("I clienti totali della banca sono: " + myBank.customers.Count);
 
@@ -39,6 +42,8 @@ foreach (Customer customer in customerList)
 
 Console.WriteLine("Inserisci il codice fiscale da cercare: ");
 Customer fcInput = myBank.SearchCustomer(Console.ReadLine());
+
+
 
 
 

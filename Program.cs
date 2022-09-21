@@ -67,3 +67,4 @@ int totLoanInput = myBank.TotalCustomerLoans(Console.ReadLine());
 
 
 
+

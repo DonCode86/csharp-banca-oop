@@ -60,12 +60,12 @@ public class Bank
                 }
             }
         }
-        return null;
+        return loans;
     }
     
     public int TotalCustomerLoans (string fiscalCode)
     {
-        return SearchLoan(fiscalCode).Count();  
+        return SearchLoan(fiscalCode).Count();
     }
 }
 

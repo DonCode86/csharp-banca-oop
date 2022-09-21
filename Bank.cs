@@ -53,10 +53,10 @@ public class Bank
                 {
                     loans.Add((Loan)loan);
                     Console.WriteLine("E' presente un prestito per il codice fiscale inserito, " +
-                        "l'ammontare del prestito è: " + loan.loanAmount + "euro");
+                        "l'ammontare del prestito è: " + loan.loanAmount + " euro");
                 } else
                 {
-                    Console.WriteLine("NO");
+                    Console.WriteLine("Non è presente nessun prestito per il codice fiscale inserito");
                 }
             }
         }

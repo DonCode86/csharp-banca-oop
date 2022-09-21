@@ -63,5 +63,9 @@ public class Bank
         return null;
     }
     
+    public int TotalCustomerLoans (string fiscalCode)
+    {
+        return SearchLoan(fiscalCode).Count();  
+    }
 }
 

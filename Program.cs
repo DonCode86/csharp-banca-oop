@@ -33,7 +33,9 @@ Customer Giuseppe = new Customer("Giuseppe", "Vinelli", "GSPVNL81D20C810A", 500)
 myBank.AddCustomer(Giuseppe);
 
 Loan loan1 = new Loan(Giuseppe, 5000, 10, "22/09/2022", "22/07/2023");
+Loan loan2 = new Loan(Giuseppe, 10000, 10, "22/09/2022", "22/07/2023");
 myBank.AddLoan(loan1);
+myBank.AddLoan(loan2);
 
 List<Customer> customerList = myBank.customers;
 Console.WriteLine("I clienti totali della banca sono: " + myBank.customers.Count);
@@ -53,8 +55,12 @@ foreach (Loan loan in myBank.loans)
 //Console.WriteLine("Inserisci il codice fiscale da cercare: ");
 //Customer fcInput = myBank.SearchCustomer(Console.ReadLine());
 
-Console.WriteLine("Inserisci il codice fiscale per vedere se c'e' un prestito collegato");
-List<Loan> loanInput = myBank.SearchLoan(Console.ReadLine());
+//Console.WriteLine("Inserisci il codice fiscale per vedere se c'e' un prestito collegato");
+//List<Loan> loanInput = myBank.SearchLoan(Console.ReadLine());
+
+Console.WriteLine("Inserisci il codice fiscale per sapere i tuoi prestiti totali");
+int totLoanInput = myBank.TotalCustomerLoans(Console.ReadLine());
+
 
 
 

@@ -1,4 +1,7 @@
-﻿public class Bank
+﻿using System.Diagnostics.CodeAnalysis;
+using System.Reflection.Metadata.Ecma335;
+
+public class Bank
 {
     public string name { get; set; }
     public List<Customer> customers { get; set; } 
@@ -39,5 +42,26 @@
     {
         this.loans.Add(loan);
     }
+
+    public List<Loan> SearchLoan (string fiscalCode)
+    {
+        List<Loan> loans = new List<Loan>();
+        {
+            foreach (Loan loan in this.loans)
+            {
+                if (loan.customer.fiscalCode.Contains(fiscalCode))
+                {
+                    loans.Add((Loan)loan);
+                    Console.WriteLine("E' presente un prestito per il codice fiscale inserito, " +
+                        "l'ammontare del prestito è: " + loan.loanAmount + "euro");
+                } else
+                {
+                    Console.WriteLine("NO");
+                }
+            }
+        }
+        return null;
+    }
+    
 }
 

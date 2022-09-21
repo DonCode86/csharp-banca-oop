@@ -50,8 +50,11 @@ foreach (Loan loan in myBank.loans)
     Console.WriteLine("Valore prestito :" + loan.loanAmount);
 }
 
-Console.WriteLine("Inserisci il codice fiscale da cercare: ");
-Customer fcInput = myBank.SearchCustomer(Console.ReadLine());
+//Console.WriteLine("Inserisci il codice fiscale da cercare: ");
+//Customer fcInput = myBank.SearchCustomer(Console.ReadLine());
+
+Console.WriteLine("Inserisci il codice fiscale per vedere se c'e' un prestito collegato");
+List<Loan> loanInput = myBank.SearchLoan(Console.ReadLine());
 
 
 

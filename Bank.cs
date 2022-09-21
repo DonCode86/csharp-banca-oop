@@ -10,7 +10,8 @@
         Customer customer1 = new Customer("Daniele", "Ciccarelli", "CCCDNL86A13D810A", 1000);
         Customer customer2 = new Customer("Mario", "Rossi", "MRARSS81A11R210Z", 2000);
         this.customers = new List<Customer> { customer1, customer2 };
-        this.loans = loans;
+
+        this.loans = new List<Loan> { };
     }
 
     public Customer SearchCustomer (string fiscalCode)
@@ -28,6 +29,15 @@
     public void AddCustomer (Customer customer)
     {
         customers.Add(customer);
+    }
+
+    public void EditCustomer (Customer customer)
+    {
+
+    }
+    public void AddLoan(Loan loan)
+    {
+        this.loans.Add(loan);
     }
 }
 

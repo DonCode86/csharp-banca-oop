@@ -32,12 +32,22 @@ Console.WriteLine("Benvenuto in " + myBank.name);
 Customer Giuseppe = new Customer("Giuseppe", "Vinelli", "GSPVNL81D20C810A", 500);
 myBank.AddCustomer(Giuseppe);
 
+Loan loan1 = new Loan(Giuseppe, 5000, 10, "22/09/2022", "22/07/2023");
+myBank.AddLoan(loan1);
+
 List<Customer> customerList = myBank.customers;
 Console.WriteLine("I clienti totali della banca sono: " + myBank.customers.Count);
 
 foreach (Customer customer in customerList)
 {
     Console.WriteLine(customer.name);
+}
+
+Console.WriteLine("I prestiti totali della banca sono: " + myBank.loans.Count);
+
+foreach (Loan loan in myBank.loans)
+{
+    Console.WriteLine("Valore prestito :" + loan.loanAmount);
 }
 
 Console.WriteLine("Inserisci il codice fiscale da cercare: ");

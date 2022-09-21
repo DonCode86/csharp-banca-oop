@@ -26,3 +26,13 @@
 //Per i clienti e per i prestiti si vuole stampare un prospetto riassuntivo con tutti i dati che li caratterizzano in un formato di tipo stringa a piacere.
 //Bonus:
 //visualizzare per ogni cliente, la situazione dei suoi prestiti in formato tabellare.
+Bank myBank = new Bank("Banca Sharp");
+Console.WriteLine("Benvenuto in " + myBank.name);
+
+List<Customer> customerList = myBank.customers;
+Console.WriteLine("I clienti totali della banca sono: " + myBank.customers.Count);
+
+foreach (Customer customer in customerList)
+{
+    Console.WriteLine(customer.name);
+}

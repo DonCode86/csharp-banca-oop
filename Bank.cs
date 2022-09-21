@@ -19,9 +19,15 @@
         {
             if(customer.fiscalCode == fiscalCode)
             {
-                Console.WriteLine("il codice fiscale e' presente nella nostra banca"); ;
-            }
+                Console.WriteLine("il codice fiscale e' presente nella nostra banca"); 
+            } 
         }
         return null;
     }
+
+    public void AddCustomer (Customer customer)
+    {
+        customers.Add(customer);
+    }
 }
+

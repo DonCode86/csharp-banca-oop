@@ -12,4 +12,16 @@
         this.customers = new List<Customer> { customer1, customer2 };
         this.loans = loans;
     }
+
+    public Customer SearchCustomer (string fiscalCode)
+    {
+        foreach (Customer customer in this.customers)
+        {
+            if(customer.fiscalCode == fiscalCode)
+            {
+                Console.WriteLine("il codice fiscale e' presente nella nostra banca"); ;
+            }
+        }
+        return null;
+    }
 }

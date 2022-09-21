@@ -36,3 +36,10 @@ foreach (Customer customer in customerList)
 {
     Console.WriteLine(customer.name);
 }
+
+Console.WriteLine("Inserisci il codice fiscale da cercare: ");
+Customer fcInput = myBank.SearchCustomer(Console.ReadLine());
+
+
+
+

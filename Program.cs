@@ -1,5 +1,5 @@
 ﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+// See https://aka.ms/new-console-template for more information
 //Sviluppare un’applicazione orientata agli oggetti per gestire i prestiti che una banca concede ai propri clienti.
 //La banca è caratterizzata da
 //un nome
@@ -26,29 +26,3 @@ Console.WriteLine("Hello, World!");
 //Per i clienti e per i prestiti si vuole stampare un prospetto riassuntivo con tutti i dati che li caratterizzano in un formato di tipo stringa a piacere.
 //Bonus:
 //visualizzare per ogni cliente, la situazione dei suoi prestiti in formato tabellare.
-public class Bank
-{
-    public string name { get; set; }
-    public List<Customer> customers { get; set; } 
-    public List<Loan> loans { get; set; }
-
-}
-
-public class Customer
-{
-    public string name { get; set; }
-    public string lastName { get; set; }
-    public string fiscalCode { get; set; }
-    public int salary { get; set; }
-}
-
-public class Loan
-{
-    public int id { get; set; }
-    public Customer customer { get; set; }
-    public int loanAmount { get; set; }
-    public int loanInstalament { get; set; }
-
-    public DateTime? startDate { get; set; }
-    public DateTime? endDate { get; set; }
-}
